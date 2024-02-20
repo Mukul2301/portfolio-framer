@@ -28,6 +28,10 @@
       font-size: 20px;
       color: gray;
       padding: 5px;
+
+      @media (max-width: 875px) {
+        font-size: 15px;
+      }
     }
 
     hr {
@@ -82,7 +86,7 @@
         font-weight: 100;
 
         @include mobile {
-          font-size: 36px;
+          font-size: 26px;
         }
       }
 
@@ -140,6 +144,10 @@
       img {
         height: 50px;
         width: 50px;
+        @include mobile {
+          height: 40px;
+          width: 40px;
+        }
       }
 
       @include mobile {
@@ -149,11 +157,6 @@
         padding: 20px 0;
         align-items: flex-start;
         justify-content: flex-start;
-
-        img {
-          height: 60px;
-          width: 60px;
-        }
       }
     }
 

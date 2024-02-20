@@ -104,7 +104,7 @@ const Contact = () => {
           onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 3, duration: 1 }}
+          transition={{ delay: window.innerWidth <= 768 ? 0 : 3, duration: 1 }}
         >
           <input type="text" required placeholder="Name" name="from_name" />
           <input type="email" required placeholder="Email" name="from_email" />
