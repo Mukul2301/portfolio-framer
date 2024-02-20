@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 30px;
+    padding: 10px;
 
     @include mobile {
       gap: 20px;
@@ -29,22 +29,31 @@
 
     h1 {
       font-size: 100px;
-      line-height: 88px;
+      line-height: 68px;
 
       @include mobile {
-        font-size: 35px;
+        font-size: 30px;
       }
     }
 
     span {
       font-weight: 300;
     }
+    .item {
+      h2 {
+        font-size: 10px;
+      }
+      @include mobile {
+        font-size: 10px;
+      }
+    }
   }
 
   .formContainer {
     flex: 1;
     position: relative;
-    padding: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
 
     @include mobile {
       width: 100%;
@@ -56,9 +65,7 @@
       margin: auto;
       z-index: -1;
       @include mobile {
-        height: 300px;
-        width: 100%;
-        padding: 10px;
+        display: none;
       }
     }
 
@@ -78,11 +85,12 @@
 
         @include mobile {
           padding: 10px;
+          font-size: 10px;
         }
       }
 
       button {
-        padding: 20px;
+        padding: 10px;
         border: none;
         background-color: orange;
         cursor: pointer;
@@ -91,7 +99,8 @@
         border-radius: 5px;
 
         @include mobile {
-          padding: 10px;
+          padding: 5px;
+          font-size: 20px;
         }
       }
     }
