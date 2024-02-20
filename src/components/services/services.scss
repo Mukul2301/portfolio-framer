@@ -7,6 +7,9 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @include mobile {
+    transform: none !important;
+  }
   .textContainer {
     flex: 1;
     align-self: flex-end;
@@ -24,7 +27,7 @@
       font-weight: 200;
       font-size: 20px;
       color: gray;
-      text-align: right;
+      padding: 5px;
     }
 
     hr {
@@ -63,10 +66,14 @@
         height: 100px;
         border-radius: 50px;
         object-fit: cover;
+        margin: 10px;
 
         @include mobile {
           width: 200px;
           height: 50px;
+          @include mobile {
+            display: none;
+          }
         }
       }
 
@@ -97,26 +104,61 @@
     }
   }
 
+  h2 {
+    display: none;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+    }
+  }
   .skillsContainer {
     flex: 2;
     display: flex;
     flex-direction: column;
     padding: 20px;
 
+    @include mobile {
+      flex: 2;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      padding: 0 20px;
+    }
+
     .frontContainer,
     .backContainer,
     .otherContainer {
       display: flex;
-      flex-direction: row;
+      flex-direction: col;
       align-items: center;
       justify-content: center;
       gap: 20px;
       padding: 20px 0;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        img {
+          height: 60px;
+          width: 60px;
+        }
+      }
     }
 
     h3 {
       text-align: center;
       padding-top: 30px;
+      @include mobile {
+        display: none;
+      }
     }
 
     .block {

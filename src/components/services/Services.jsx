@@ -27,7 +27,6 @@ const Services = () => {
     <motion.div
       className="services"
       variants={variants}
-      // comment out for mobile responsiveness
       initial="initial"
       animate={isInView ? "animate" : "initial"}
       ref={ref}
@@ -40,18 +39,18 @@ const Services = () => {
         <hr />
       </motion.div>
       <motion.div className="titleContainer">
-        <div className="title">
-          <img src="/people.webp" alt="" />
+        <div className="title" variants={variants}>
+          <img src="/people.webp" alt="people" />
           <h1>
             <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
           </h1>
         </div>
-        <div className="title">
+        <motion.div className="title" variants={variants}>
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
+            <motion.b whileHover={{ color: "orange" }}>For Your </motion.b>
             Business.
           </h1>
-        </div>
+        </motion.div>
       </motion.div>
       <SkillsContainer />
     </motion.div>

@@ -28,14 +28,14 @@ const textVariance = {
 };
 const sliderVariants = {
   initial: {
-    x: "100%", // Start off-screen to the left
+    x: "100%",
   },
   animate: {
-    x: "-1000%", // Move to the right edge
+    x: "-1000%",
     transition: {
-      duration: 20, // Duration of the animation
-      ease: "linear", // Linear easing for a constant speed
-      repeat: Infinity, // Repeat infinitely
+      duration: 20,
+      ease: "linear",
+      repeat: Infinity,
     },
   },
 };
@@ -88,9 +88,6 @@ const Hero = () => {
       >
         Frontend Backend FullStack Frontend Backend FullStack
       </motion.div>
-      <div className="imageContainer">
-        <img src={hero} alt="hero" />
-      </div>
     </div>
   );
 };

@@ -22,7 +22,6 @@ export const Frontend_skills = [
   { skill_name: "HTML 5", Image: html, width: 80, height: 80 },
   { skill_name: "CSS", Image: css, width: 80, height: 80 },
   { skill_name: "JavaScript", Image: js, width: 65, height: 65 },
-  { skill_name: "Type Script", Image: ts, width: 80, height: 80 },
   { skill_name: "Redux", Image: redux, width: 80, height: 80 },
   { skill_name: "Material UI", Image: mui, width: 80, height: 80 },
   { skill_name: "Tailwind", Image: tailwind, width: 80, height: 80 },
@@ -31,6 +30,7 @@ export const Frontend_skills = [
 
 export const Backend_skill = [
   { skill_name: "Nest js", Image: nestJS, width: 80, height: 80 },
+  { skill_name: "Type Script", Image: ts, width: 80, height: 80 },
   { skill_name: "My SQL", Image: msql, width: 70, height: 70 },
   { skill_name: "Postgres", Image: pg, width: 70, height: 70 },
   { skill_name: "Graphql", Image: gql, width: 80, height: 80 },

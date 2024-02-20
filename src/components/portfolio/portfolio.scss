@@ -3,6 +3,9 @@
 .portfolio {
   position: relative;
 
+  @include mobile {
+    padding: 10px;
+  }
   .progress {
     position: sticky;
     top: 0;
@@ -51,6 +54,7 @@
         @include mobile {
           width: 100%;
           max-height: 300px;
+          padding-top: 10px;
         }
 
         img {

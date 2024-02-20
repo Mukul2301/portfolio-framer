@@ -89,5 +89,10 @@
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
+
+    @include mobile {
+      font-size: 50vh;
+      bottom: 0;
+    }
   }
 }
