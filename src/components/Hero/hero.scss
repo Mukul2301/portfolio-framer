@@ -26,6 +26,10 @@
         gap: 10px;
         align-items: center;
         text-align: center;
+        @include mobile {
+          position: relative;
+          top: 50px;
+        }
       }
 
       h2 {
@@ -78,7 +82,7 @@
     top: -100px;
     right: 100px;
 
-    @media (max-width: "900px") {
+    @media (max-width: "970px") {
       height: 400px;
       width: 400px;
     }
