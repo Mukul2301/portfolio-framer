@@ -17,9 +17,14 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Mukul
+          Welcome!
         </motion.span>
-        <div className="socials">
+        <motion.div
+          className="socials"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <a href="https://www.linkedin.com/in/mukul-shende/" target="_blank">
             <img src={linkedIn} alt="linkedIn" />
           </a>
@@ -33,7 +38,7 @@ const Navbar = () => {
           <a href="https://twitter.com/MukulShende3" target="_blank">
             <img src={twitter} alt="twitter" />
           </a>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

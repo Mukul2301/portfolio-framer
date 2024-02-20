@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import hero from "/hero.png";
 import scroll from "/scroll.png";
+import hero from "/hero.png";
 import "./hero.scss";
 
 const textVariance = {
@@ -88,6 +88,9 @@ const Hero = () => {
       >
         Frontend Backend FullStack Frontend Backend FullStack
       </motion.div>
+      <div className="imageContainer">
+        <img src={hero} alt="hero" />
+      </div>
     </div>
   );
 };
