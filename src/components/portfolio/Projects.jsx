@@ -7,17 +7,20 @@ const Projects = ({ item }) => {
     target: ref,
   });
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+
   return (
     <section>
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            <img src={item.image} alt="projects" />
+            <img src={item.image} alt={item.title} />
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            <a href={item.url} target="_blank" rel="noopener noreferrer">
+              <button>See Demo</button>
+            </a>
           </motion.div>
         </div>
       </div>

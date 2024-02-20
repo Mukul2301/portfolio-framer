@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./portfolio.scss";
 import Projects from "./Projects";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -6,38 +6,36 @@ import { motion, useScroll, useSpring } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "Wordle App",
-    image:
-      "https://assetsio.reedpopcdn.com/wordle-past-answers-header.jpg?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nostrum excepturi dolores eligendi fugit consequuntur, molestiae ipsam soluta reiciendis, doloremque aliquam commodi nam laborum numquam laudantium vel mollitia qui enim.",
+    title: "Wordle Game",
+    url: "https://wordle-mukul.netlify.app/",
+    image: import("../../assets/wordle.webp"),
+    desc: "Built a Wordle game using React, HTML, and CSS. Players guess a hidden five-letter word, receiving feedback on correctness. Features input field, submit button, guess history, and reset button. Offers engaging puzzle experience with intuitive interface. Demonstrates proficiency in React development and front-end design.",
   },
   {
     id: 2,
-    title: "KanBan App",
-    image:
-      "https://assetsio.reedpopcdn.com/wordle-past-answers-header.jpg?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nostrum excepturi dolores eligendi fugit consequuntur, molestiae ipsam soluta reiciendis, doloremque aliquam commodi nam laborum numquam laudantium vel mollitia qui enim.",
+    title: "Kanban Board",
+    url: "https://kanban-mukul.netlify.app/",
+    image: import("../../assets/kanban.jpg"),
+    desc: "Crafted a Kanban board with React and Tailwind CSS, enabling task management via drag-and-drop interface. Users organize tasks into customizable columns, facilitating workflow visualization and collaboration. Demonstrates adeptness in React development and UI design, enhancing productivity and project management capabilities.",
   },
   {
     id: 3,
-    title: "Registration App",
-    image:
-      "https://assetsio.reedpopcdn.com/wordle-past-answers-header.jpg?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nostrum excepturi dolores eligendi fugit consequuntur, molestiae ipsam soluta reiciendis, doloremque aliquam commodi nam laborum numquam laudantium vel mollitia qui enim.",
+    title: "Registration Form",
+    url: "https://ms-reg-form-redux.netlify.app/",
+    image: import("../../assets/register.webp"),
+    desc: "Created a user registration form using Redux for state management coupled with Material-UI components, ensuring a streamlined and intuitive user experience. Leveraged Material-UI's pre-designed components for a polished look and feel, enhancing the form's aesthetic appeal and usability while maintaining Redux's powerful state management capabilities.",
   },
   {
     id: 4,
-    title: "Currency App",
-    image:
-      "https://assetsio.reedpopcdn.com/wordle-past-answers-header.jpg?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nostrum excepturi dolores eligendi fugit consequuntur, molestiae ipsam soluta reiciendis, doloremque aliquam commodi nam laborum numquam laudantium vel mollitia qui enim.",
+    title: "Currency Converter",
+    url: "https://currency-converter-min.netlify.app/",
+    image: import("../../assets/currency.jpeg"),
+    desc: "Developed a dynamic currency converter application utilizing React for frontend functionality, CSS for styling, and the ExchangeRate API for real-time currency data. Users can effortlessly convert between different currencies, with the application fetching up-to-date exchange rates from the API, providing accurate and reliable conversion results.",
   },
 ];
-const Portfolio = () => {
-  const ref = useRef();
 
+const Portfolio = () => {
   const { scrollYProgress } = useScroll({
-    target: ref,
     offset: ["end end", "start start"],
   });
 
@@ -47,7 +45,7 @@ const Portfolio = () => {
   });
 
   return (
-    <div className="portfolio" ref={ref}>
+    <div className="portfolio">
       <div className="progress">
         <h1>Featured Works</h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>

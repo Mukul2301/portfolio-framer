@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-
 import emailjs from "@emailjs/browser";
 
 const variants = {
@@ -20,8 +19,8 @@ const variants = {
 };
 
 const Contact = () => {
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const ref = useRef();
   const form = useRef();
 
@@ -111,8 +110,8 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="from_email" />
           <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
-          {error && "Error!"}
-          {success && "Success!"}
+          {error && <div className="error">{error}</div>}
+          {success && <div className="success">{success}</div>}
         </motion.form>
       </div>
     </motion.div>
